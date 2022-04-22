@@ -1,5 +1,6 @@
 export default {
   ssr: false,
+  target: 'static',
   css: [
     '@/assets/css/tail.css'
   ],
