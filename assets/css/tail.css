@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Nunito+Sans:wght@400;600;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply bg-gray-50 relative overflow-hidden overflow-y-auto m-0 p-0 scroll-smooth;
+    font-family: 'Nunito Sans', sans-serif;;
+  }
+}
+
+@layer components {
+
+/* Cards */
+  .card {
+    @apply bg-white shadow-sm drop-shadow-sm transition-shadow hover:shadow-lg rounded;
+  }
+  .card-header, .card-footer {
+    @apply px-5 py-3;
+  }
+  .card-body {
+    @apply p-5;
+  }
+
+/* Forms */
+  .col-form-label {
+    @apply block text-sm mb-1;
+  }
+  .form-control {
+    @apply block w-full px-3 py-2 rounded ring-0 outline-0 transition-shadow shadow drop-shadow-sm focus:shadow-md;
+  }
+
+/* Buttons */
+
+  .btn {
+    @apply inline-block px-4 py-2 rounded tracking-wider shadow-md drop-shadow-sm hover:bg-opacity-90 transition-colors;
+  }
+
+}
+
+
+@layer {
+  .app-enter-active,
+  .app-leave-active {
+    transition: opacity 0.2s;
+  }
+  .app-enter,
+  .app-leave-active {
+    opacity: 0;
+  }
+}
